@@ -118,7 +118,7 @@ class core_user {
         $dummyuser = new stdClass();
         $dummyuser->id = self::NOREPLY_USER;
         $dummyuser->email = $CFG->noreplyaddress;
-        $dummyuser->firstname = get_string('noreplyname');
+        $dummyuser->firstname = (!empty($CFG->noreplydisplayname))?$CFG->noreplydisplayname:get_string('noreplyname');
         $dummyuser->username = 'noreply';
         $dummyuser->lastname = '';
         $dummyuser->confirmed = 1;
